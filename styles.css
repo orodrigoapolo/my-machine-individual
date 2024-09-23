@@ -1,0 +1,73 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/c5/9a/d2/c59ad2bd4ad2fbacd04017debc679ddb.gif");
+    background-repeat: no-repeat;
+    /* Evita que o GIF se repita */
+    background-size: cover;
+    /* O GIF ocupará toda a tela */
+    background-position: center;
+    height: 100vh;
+}
+
+.conteine {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    font-size: 2rem;
+    color: white;
+}
+
+.conteine_cards {
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+
+.card_conta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    background-color: #0ae14032;
+    border-radius: 10px;
+    border: 1px solid #0ae140;
+    padding: 0px 20px 20px 20px;
+}
+
+h3 {
+    color: white;
+    font-size: 2rem;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #0ae140;
+    padding: 10px;
+}
+
+.btn {
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #0ae140;
+    padding: 10px;
+    background-color: #0ae140;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #0ae140;
+    font-size: 1rem;
+}
+
+.texto_valor {
+    font-size: 1.5rem;
+    color: white;
+}
+
+b {
+    font-size: 1.5rem;
+    color: white;
+}

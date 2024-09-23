@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine GI</title>
+</head>
+<body>
+    <div class="conteine"><h1 class="titulo">Machine Rodrigo</h1></div>
+
+    <div class="conteine conteine_cards">
+        <div class="card_conta">
+            <h3>Decimal</h3>
+            <input id="ipt_valor_decimal" type="text" placeholder="Digite o valor em decimal">
+            <button class="btn" onclick="decimal()">Converter</button>
+            <div id="div_decimal"></div>
+        </div>
+        <div class="card_conta">
+            <h3>Octal</h3>
+            <input id="ipt_valor_octal" type="text" placeholder="Digite o valor em decimal">
+
+            <button class="btn" onclick="octal()">Converter</button>
+            <div id="div_octal"></div>
+        </div>
+        <div class="card_conta">
+            <h3>Hexadecimal</h3>
+            <input id="ipt_valor_hexadecimal" type="text" placeholder="Digite o valor em decimal">
+
+            <button class="btn" onclick="hexadecimal()">Converter</button>
+            <div id="div_hexadecimal"></div>
+        </div>
+        <div class="card_conta">
+            <h3>Binario</h3>
+            <input id="ipt_valor_binario" type="text" placeholder="Digite o valor em decimal">
+
+            <button class="btn" onclick="binario()">Converter</button>
+            <div id="div_binario"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function decimal(){
+        var decimal = Number(ipt_valor_decimal.value)
+        var mensagem = ``
+
+        var binario = decimal.toString(2)
+        var octal = decimal.toString(8)
+        var hexadecimal = decimal.toString(16)
+
+        mensagem += `<div class="mensagem"><span class="texto_valor">Binario:</span><b> ${binario}</b><br>
+            <span class="texto_valor">Octal:</span> <b>${octal} </b><br>
+            <span class="texto_valor">Hexadecimal:</span> <b>${hexadecimal}</b></div>`
+
+        div_decimal.innerHTML = mensagem 
+    }
+
+    function octal(){
+        var octal = Number(ipt_valor_octal.value)
+        var mensagem = ``
+
+        var decimal = parseInt(octal,8)
+        var binario = decimal.toString(2)
+        var hexadecimal = decimal.toString(16)
+
+        mensagem += `<div class="mensagem"><span class="texto_valor">Decimal:</span><b> ${decimal}</b><br>
+            <span class="texto_valor">Binario:</span> <b>${binario} </b><br>
+            <span class="texto_valor">Hexadecimal:</span> <b>${hexadecimal}</b></div>`
+
+        div_octal.innerHTML = mensagem 
+    }
+
+    function hexadecimal(){
+        var hexadecimal = ipt_valor_hexadecimal.value
+        var mensagem = ``
+      
+        var decimal = parseInt(hexadecimal,16)
+        var octal = decimal.toString(8)
+        var binario = decimal.toString(2)
+
+        mensagem += `<div class="mensagem"><span class="texto_valor">Decimal:</span><b> ${decimal}</b><br>
+            <span class="texto_valor">Octal:</span> <b>${octal} </b><br>
+            <span class="texto_valor">Binário:</span> <b>${binario}</b></div>`
+
+        div_hexadecimal.innerHTML = mensagem 
+    }
+
+    function binario(){
+        var binario = Number(ipt_valor_binario.value)
+        var mensagem = ``
+
+        var decimal = parseInt(binario,2)
+        var octal = decimal.toString(8)
+        var hexadecimal= decimal.toString(16)
+
+        mensagem += `<div class="mensagem"><span class="texto_valor">Decimal:</span><b> ${decimal}</b><br>
+            <span class="texto_valor">Octal:</span> <b>${octal} </b><br>
+            <span class="texto_valor">Hexadecimal:</span> <b>${hexadecimal}</b></div>`
+
+        div_binario.innerHTML = mensagem 
+    }
+</script>
